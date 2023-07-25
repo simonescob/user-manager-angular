@@ -1,0 +1,20 @@
+<p class="text-lg font-semibold cursor-pointer underline mb-5" (click)="backToList()">Volver a la lista</p>
+
+<div class="space-y-3 mb-7">
+
+  <p class="font-bold text-xl">Datos del usuario:</p>
+  <div class="text-lg"> {{ user.name }} </div>
+  <div class="text-lg"> {{ user.email }} </div>
+  <div class="text-lg"> {{ user.username }} </div>
+  <div class="text-lg"> {{ user.website }} </div>
+  <div class="text-lg"> {{ user.phone }} </div>
+
+</div>
+
+<p class="font-bold text-xl">Comentarios:</p>
+<ul class="flex space-x-8 overflow-x-auto h-auto">
+  <li class="w-72 shadow-lg flex-shrink-0 my-3 p-5" *ngFor="let post of posts">
+    <div class="text-lg font-semibold leading-5 mb-5">{{ post.title }}</div>
+    <div class="text-xs">{{ post.body }}</div>
+  </li>
+</ul>

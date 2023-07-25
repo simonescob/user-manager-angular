@@ -1,0 +1,12 @@
+<h2 class="text-3xl font-bold mb-4">Lista de usuarios:</h2>
+
+<div class="">
+  <input class="border-2 border-indigo-400 focus:outline-indigo-500 p-2 rounded mr-5" type="text" placeholder="Buscar usuario">
+  <button class="btn-normal">Buscar</button>
+</div>
+
+<ul class="mt-4">
+  <li *ngFor="let user of users;">
+    <app-user-item [userItem]="user"></app-user-item>
+  </li>
+</ul>
